@@ -10,4 +10,10 @@ const getUser = (req, res) => {
     res.status(200).json(userServices.getUser(Number(id)));
 }
 
-module.exports = { getUsers, getUser};
+const postUser = (req, res) => {
+    const {name} = req.body;
+
+    res.status(200).json(userServices.postUser(name));
+}
+
+module.exports = { getUsers, getUser, postUser};
