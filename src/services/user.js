@@ -3,11 +3,11 @@ let userCount = 0;
 
 const getUsers = () => {
     return users;
-}
+};
 
 const getUser = (id) => {
     return users.find((user) => user.id === id);
-}
+};
 
 const postUser = (name) => {
     const newUser = {
@@ -18,6 +18,6 @@ const postUser = (name) => {
     users.push(newUser);
 
     return newUser;
-}
+};
 
-module.exports = { getUsers, getUser, postUser };
+export default {getUsers, getUser, postUser};
